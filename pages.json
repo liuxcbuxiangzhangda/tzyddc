@@ -22,6 +22,11 @@
 		},
 		
 		//组件页面
+		// 登录
+		{
+			"path": "pages/center/login/index"
+		},
+
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/tabBar/component/component",
