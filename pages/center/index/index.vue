@@ -28,7 +28,7 @@
       <!-- 已认证 -->
       <view v-if="iscertification">
         <uni-list>
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="消息通知" />
+          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" @click="gotoMessage" title="消息通知" />
           <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="我的发布" />
           <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="草稿箱" />
         </uni-list>
@@ -71,9 +71,13 @@ export default {
   },
   methods: {
     gotologin() {
-		console.log("444")
       uni.navigateTo({
         url: "/pages/center/login/index"
+      });
+    },
+    gotoMessage(){
+      uni.navigateTo({
+        url: "/pages/center/messageNotice/index"
       });
     }
   }

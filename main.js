@@ -7,6 +7,7 @@ import uLink from '@/components/uLink.vue'
 import store from './store'
 import uniList from '@/components/uni-list/uni-list.vue'
 import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
+import uniPopup from '@/components/uni-popup/uni-popup.vue'
 // 添加统计
 // const Stat = require('./statistics/dcloud-stat');
 // Stat.init(Vue);
@@ -25,6 +26,7 @@ Vue.component('page-foot', pageFoot)
 Vue.component('uLink', uLink)
 Vue.component('uniList', uniList)
 Vue.component('uniListItem', uniListItem)
+Vue.component('uniPopup', uniPopup)
 
 App.mpType = 'app'
 

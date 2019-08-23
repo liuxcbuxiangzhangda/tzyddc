@@ -26,6 +26,18 @@
 		{
 			"path": "pages/center/login/index"
 		},
+		// 消息通知
+		{
+			"path": "pages/center/messageNotice/index",
+			"style":{
+				"enablePullDownRefresh": true//下拉刷新
+			}
+			
+		},
+		// 消息通知详情
+		{
+			"path": "pages/center/messageNotice/detail"
+		},
 
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
