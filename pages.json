@@ -38,6 +38,30 @@
 		{
 			"path": "pages/center/messageNotice/detail"
 		},
+		// 我的发布
+		{
+			"path": "pages/center/myRelease/index"
+		},
+		// 草稿箱
+		{
+			"path": "pages/center/draft/index"
+		},
+		// 我的收藏
+		{
+			"path": "pages/center/collection/index"
+		},
+		// 设置
+		{
+			"path": "pages/center/setting/index"
+		},
+		// 账户信息
+		{
+			"path": "pages/center/setting/accountInfor"
+		},
+		// 关于我们
+		{
+			"path": "pages/center/setting/aboutUs"
+		},
 
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{

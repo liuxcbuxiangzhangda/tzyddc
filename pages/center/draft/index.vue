@@ -1,8 +1,5 @@
 <template>
   <view class="uni-container">
-    <view class="searchInput">
-      <input class="uni-input" confirm-type="search" placeholder="请输入搜索关键词" placeholder-style="color:#999;fontSize:28upx" />
-    </view>
     <uni-swipe-action :options="options1" v-for="(item,index) in listData" :key="index">
       <view class="itemWarp">
         <image class="itemImg" :src="item.src" />
@@ -22,7 +19,7 @@ export default {
     return {
       options1: [
         {
-          text: "修改",
+          text: "删除",
           style: {
             backgroundColor: "rgba(254,59,48,1)",
             fontSize: "36upx"
@@ -73,16 +70,6 @@ export default {
 .uni-container {
   background: #fff;
   height: 100%;
-  .searchInput {
-    padding: 22upx 30upx;
-    .uni-input {
-      height: 72upx;
-      text-align: center;
-      padding: 0;
-      background: rgba(238, 238, 238, 1);
-      border-radius: 36upx;
-    }
-  }
   .itemWarp {
     margin-left: 30upx;
     padding: 32upx 0;

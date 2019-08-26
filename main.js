@@ -8,6 +8,7 @@ import store from './store'
 import uniList from '@/components/uni-list/uni-list.vue'
 import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
 import uniPopup from '@/components/uni-popup/uni-popup.vue'
+import uniSwipeAction from '@/components/uni-swipe-action/uni-swipe-action.vue'
 // 添加统计
 // const Stat = require('./statistics/dcloud-stat');
 // Stat.init(Vue);
@@ -27,6 +28,7 @@ Vue.component('uLink', uLink)
 Vue.component('uniList', uniList)
 Vue.component('uniListItem', uniListItem)
 Vue.component('uniPopup', uniPopup)
+Vue.component('uniSwipeAction', uniSwipeAction)
 
 App.mpType = 'app'
 

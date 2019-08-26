@@ -4,7 +4,7 @@
 		<view class="uni-common-mt">
 			<view class="uni-form-item uni-column">
 				<view class="title">可自动聚焦的 input</view>
-				<input class="uni-input" focus placeholder="自动获得焦点" />
+				<input class="uni-input" focus placeholder="自动获得焦点" >
 			</view>
 			<!-- #ifdef APP-PLUS -->
 			<view v-if="platform==='ios'" class="uni-form-item uni-column">

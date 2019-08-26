@@ -21,27 +21,67 @@
     <!-- 未登录 -->
     <view v-else class="logtitle">
       <image class="imgpic" src="/static/images/center/centerlogo@2x.png" />
-      <view class="loginBtn" @click="gotologin">立即登录</view>
+      <view class="loginBtn" @click="gotoNext('login/index')">立即登录</view>
     </view>
 
     <view class="listWarp">
       <!-- 已认证 -->
       <view v-if="iscertification">
         <uni-list>
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" @click="gotoMessage" title="消息通知" />
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="我的发布" />
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="草稿箱" />
+          <uni-list-item
+            :show-extra-icon="true"
+            :extra-icon="extraIcon1"
+            @click="gotoNext('messageNotice/index')"
+            title="消息通知"
+          />
+          <uni-list-item
+            :show-extra-icon="true"
+            :extra-icon="extraIcon1"
+            @click="gotoNext('myRelease/index')"
+            title="我的发布"
+          />
+          <uni-list-item
+            :show-extra-icon="true"
+            :extra-icon="extraIcon1"
+            @click="gotoNext('draft/index')"
+            title="草稿箱"
+          />
         </uni-list>
         <uni-list class="item">
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="我的收藏" />
-          <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="设置" />
+          <uni-list-item
+            :show-extra-icon="true"
+            :extra-icon="extraIcon1"
+            @click="gotoNext('collection/index')"
+            title="我的收藏"
+          />
+          <uni-list-item
+            :show-extra-icon="true"
+            :extra-icon="extraIcon1"
+            @click="gotoNext('setting/index')"
+            title="设置"
+          />
         </uni-list>
       </view>
       <!-- 未认证 -->
       <uni-list v-else>
-        <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="消息通知" />
-        <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="我的发布" />
-        <uni-list-item :show-extra-icon="true" :extra-icon="extraIcon1" title="草稿箱" />
+        <uni-list-item
+          :show-extra-icon="true"
+          :extra-icon="extraIcon1"
+          @click="gotoNext('messageNotice/index')"
+          title="消息通知"
+        />
+        <uni-list-item
+          :show-extra-icon="true"
+          :extra-icon="extraIcon1"
+          @click="gotoNext('collection/index')"
+          title="我的收藏"
+        />
+        <uni-list-item
+          :show-extra-icon="true"
+          :extra-icon="extraIcon1"
+          @click="gotoNext('setting/index')"
+          title="设置"
+        />
       </uni-list>
     </view>
   </view>
@@ -64,20 +104,15 @@ export default {
         type: "settings"
       },
       islogin: false, //是否已登录
-      iscertification: true, //是否已认证
+      iscertification: false, //是否已认证
       certificationTag: "村民认证", //认证标识
       telNum: "13654425566"
     };
   },
   methods: {
-    gotologin() {
+    gotoNext(url) {
       uni.navigateTo({
-        url: "/pages/center/login/index"
-      });
-    },
-    gotoMessage(){
-      uni.navigateTo({
-        url: "/pages/center/messageNotice/index"
+        url: `/pages/center/${url}`
       });
     }
   }
