@@ -28,60 +28,20 @@
       <!-- 已认证 -->
       <view v-if="iscertification">
         <uni-list>
-          <uni-list-item
-            :show-extra-icon="true"
-            :extra-icon="extraIcon1"
-            @click="gotoNext('messageNotice/index')"
-            title="消息通知"
-          />
-          <uni-list-item
-            :show-extra-icon="true"
-            :extra-icon="extraIcon1"
-            @click="gotoNext('myRelease/index')"
-            title="我的发布"
-          />
-          <uni-list-item
-            :show-extra-icon="true"
-            :extra-icon="extraIcon1"
-            @click="gotoNext('draft/index')"
-            title="草稿箱"
-          />
+          <uni-list-item @click="gotoNext('messageNotice/index')" title="消息通知" thumb="/static/images/center/Iconmess@@2x.png" />
+          <uni-list-item @click="gotoNext('myRelease/index')" title="我的发布" thumb="/static/images/center/IconReleas@@2x.png"/>
+          <uni-list-item @click="gotoNext('draft/index')" title="草稿箱" thumb="/static/images/center/Icondraft@@2x.png" />
         </uni-list>
         <uni-list class="item">
-          <uni-list-item
-            :show-extra-icon="true"
-            :extra-icon="extraIcon1"
-            @click="gotoNext('collection/index')"
-            title="我的收藏"
-          />
-          <uni-list-item
-            :show-extra-icon="true"
-            :extra-icon="extraIcon1"
-            @click="gotoNext('setting/index')"
-            title="设置"
-          />
+          <uni-list-item @click="gotoNext('collection/index')" title="我的收藏" thumb="/static/images/center/Iconcoll@@2x.png" />
+          <uni-list-item @click="gotoNext('setting/index')" title="设置" thumb="/static/images/center/Iconset@@2x.png" />
         </uni-list>
       </view>
       <!-- 未认证 -->
       <uni-list v-else>
-        <uni-list-item
-          :show-extra-icon="true"
-          :extra-icon="extraIcon1"
-          @click="gotoNext('messageNotice/index')"
-          title="消息通知"
-        />
-        <uni-list-item
-          :show-extra-icon="true"
-          :extra-icon="extraIcon1"
-          @click="gotoNext('collection/index')"
-          title="我的收藏"
-        />
-        <uni-list-item
-          :show-extra-icon="true"
-          :extra-icon="extraIcon1"
-          @click="gotoNext('setting/index')"
-          title="设置"
-        />
+        <uni-list-item @click="gotoNext('messageNotice/index')" thumb="/static/images/center/Iconmess@@2x.png" title="消息通知" />
+        <uni-list-item @click="gotoNext('collection/index')" title="我的收藏" thumb="/static/images/center/Iconcoll@@2x.png" />
+        <uni-list-item @click="gotoNext('setting/index')" title="设置" thumb="/static/images/center/Iconset@@2x.png" />
       </uni-list>
     </view>
   </view>
@@ -98,13 +58,8 @@ export default {
   },
   data() {
     return {
-      extraIcon1: {
-        color: "#007aff",
-        size: "22",
-        type: "settings"
-      },
       islogin: false, //是否已登录
-      iscertification: false, //是否已认证
+      iscertification: true, //是否已认证
       certificationTag: "村民认证", //认证标识
       telNum: "13654425566"
     };
@@ -221,12 +176,34 @@ export default {
   .item {
     margin-top: 20upx;
   }
-
-  /deep/ .uni-list-item__content-title {
-    font-size: 30upx;
-    font-family: PingFang-SC;
-    font-weight: 500;
-    color: rgba(51, 51, 51, 1);
+  /deep/ .uni-list {
+    &:before {
+      background: #fff;
+    }
+    &:after {
+      background: #fff;
+    }
+    .uni-list-item {
+      .uni-list-item__container {
+        &::after {
+          background: #eee;
+          left: 98upx;
+        }
+        padding: 34upx 30upx;
+        .uni-list-item__content-title {
+          font-size: 30upx;
+          font-family: PingFang-SC;
+          font-weight: 500;
+          color: rgba(51, 51, 51, 1);
+          line-height: 30upx;
+        }
+        .uni-list-item__extra {
+          .uni-icon-arrowright {
+            color: #eee !important;
+          }
+        }
+      }
+    }
   }
 }
 </style>

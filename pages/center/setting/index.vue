@@ -2,7 +2,7 @@
   <view class="listWarp">
     <uni-list>
       <uni-list-item @click="gotoNext('setting/accountInfor')" title="账户信息" />
-      <uni-list-item @click="gotoNext('myRelease/index')" title="显示文字调整" />
+      <uni-list-item title="显示文字调整" />
       <uni-list-item @click="gotoNext('setting/aboutUs')" title="关于我们" />
     </uni-list>
     <view class="layout">退出登录</view>
