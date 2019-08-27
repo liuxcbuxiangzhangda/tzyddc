@@ -2,16 +2,52 @@
 	"pages": [
 		//项目页面
 		//首页
-		//中心首页
 		{
-			"path": "pages/center/index/index"
-		},
-		{
-			"path": "pages/index/index/index",//pages/index/index/index.vue
-			"style":{
+			"path": "pages/index/index/index", //pages/index/index/index.vue
+			"style": {
 				"navigationStyle": "custom"
 			}
 		},
+		//引导页14
+		{
+			"path": "pages/guide/search",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//引导页2-9
+		{
+			"path": "pages/guide/trading",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//引导页3-9
+		{
+			"path": "pages/guide/connection",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//引导页15
+		{
+			"path": "pages/guide/redcircle",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//引导页16
+		{
+			"path": "pages/guide/whitecircle",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//个人中心首页
+		{
+			"path": "pages/center/index/index"
+		},
+
 		//发布资源
 		{
 			"path": "pages/release/index/index"
@@ -20,7 +56,7 @@
 		{
 			"path": "pages/resources/index/index"
 		},
-		
+
 		//组件页面
 		// 登录
 		{
@@ -29,10 +65,10 @@
 		// 消息通知
 		{
 			"path": "pages/center/messageNotice/index",
-			"style":{
-				"enablePullDownRefresh": true//下拉刷新
+			"style": {
+				"enablePullDownRefresh": true //下拉刷新
 			}
-			
+
 		},
 		// 消息通知详情
 		{
